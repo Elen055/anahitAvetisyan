@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4f0;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #24594c;
+}
+
+p {
+    color: #555;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #36836d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #24594c;
+}
+
+#results {
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 120px;
+}

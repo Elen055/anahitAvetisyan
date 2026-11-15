@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Employee Information System</h1>
+    <p>Choose a category to view information</p>
+
+    <div class="buttons">
+        <button onclick="showEmployees()">Employees</button>
+        <button onclick="showContacts()">Contacts</button>
+        <button onclick="showPayments()">Payments</button>
+    </div>
+
+    <div id="results">
+        <h2>Welcome!</h2>
+        <p>Select one of the buttons above.</p>
+    </div>
+
+    <button onclick="goHome()">Back to Home</button>
+
+</div>
+
+<script>
+    function showEmployees() {
+        fetch("/employees")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("results").innerHTML = data;
+            });
+    }
+
+    function showContacts() {
+        fetch("/contacts")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("results").innerHTML = data;
+            });
+    }
+
+    function showPayments() {
+        fetch("/payments")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("results").innerHTML = data;
+            });
+    }
+
+    function goHome() {
+        document.getElementById("results").innerHTML =
+            "<h2>Welcome!</h2><p>Select one of the buttons above.</p>";
+    }
+</script>
+
+</body>
+</html>
